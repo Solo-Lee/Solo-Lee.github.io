@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    博客主题更改,返回顶部功能,显示网页百分比具体实现
+  
+</title>
+
+<meta name="description" content="添加的这个效果其实蛮简单的,第一个目的是为了能快速的返回顶部,第二个目的是显示当前页面的浏览了多少以百分比显示.">
+<meta name="keywords" content="skills">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客主题更改,返回顶部功能,显示网页百分比具体实现">
+<meta property="og:url" content="http://sololee.me/博客主题更改-返回顶部功能具体实现/index.html">
+<meta property="og:site_name" content="Solo Lee">
+<meta property="og:description" content="添加的这个效果其实蛮简单的,第一个目的是为了能快速的返回顶部,第二个目的是显示当前页面的浏览了多少以百分比显示.">
+<meta property="og:updated_time" content="2017-07-31T04:49:32.712Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="博客主题更改,返回顶部功能,显示网页百分比具体实现">
+<meta name="twitter:description" content="添加的这个效果其实蛮简单的,第一个目的是为了能快速的返回顶部,第二个目的是显示当前页面的浏览了多少以百分比显示.">
+
+
+  <link rel="alternative" href="/atom.xml" title="Solo Lee" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+
+</head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">Solo Lee</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">Solo Lee</a></h1>
+    
+      <p class="subtitle">
+        tech otaku save the world
+      </p>
+    
+    <div class="info">
+      <div class="content">
+        
+          <div class="description">一个技术宅的博客</div>
+        
+        
+          <div class="author">Solo Lee</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://s.gravatar.com/avatar/ce98d78f2c1440ba8189eefe92d835b9?s=80"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">Category</a>
+                
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">Tag</a>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/skills/">skills</a><span class="tag-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">Archive</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">2</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/about" title="About">About</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/solo-lee" title="Github" target="_blank" rel="external">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div id="details" style="max-width: 1000px">
+      
+          <article id="post-博客主题更改-返回顶部功能具体实现" class="article article-type-post">
+  
+    <h1 class="article-header">
+      博客主题更改,返回顶部功能,显示网页百分比具体实现
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  2017-07-28
+</span>
+
+    
+
+    
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/skills/">skills</a></li></ul>
+	</span>
+
+
+  </div>
+  <div class="article-entry">
+    <p>添加的这个效果其实蛮简单的,第一个目的是为了能快速的返回顶部,第二个目的是显示当前页面的浏览了多少以百分比显示.<br><a id="more"></a></p>
+<h2 id="Inspiration-灵感"><a href="#Inspiration-灵感" class="headerlink" title="Inspiration 灵感"></a>Inspiration 灵感</h2><p>做这个返回顶部的功能呢,就是为了便利,因为在看文章的时候特别是网页,有时会想知道自己到底还剩多少没有看完.所以就想到了这个功能,正好有人觉得这个功能很不错,就想那就做一个吧.</p>
+<h2 id="Chat-闲聊"><a href="#Chat-闲聊" class="headerlink" title="Chat 闲聊"></a>Chat 闲聊</h2><p>因为是在别人做的主题上进行更改所以过程是有些痛苦的,加上我并没有系统的学习过前端,也就只停留在了会写些简单的HTML+CSS+JS,所以在中途一度有从零开始学,自己重新做一个博客主题的想法(PS:这个想法是完全错误的.具体可以看这个{<a href="">心得</a>}).<br>我博客是用的<a href="">Chan</a>这个主题,如果你也喜欢,可以在Github上下载查阅.<br>在这里我还推荐另一个主题<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">Next</a>这个主题做的其实也很不错,并且使用的人很多,最关键的是当你想要装饰你的博客时可以找到大量的帮助你的文章或者资料.</p>
+<h2 id="Achieve-实现"><a href="#Achieve-实现" class="headerlink" title="Achieve 实现"></a>Achieve 实现</h2><h3 id="首先我们需要给这个博客主题添加一个div来方便实现我们的返回顶部功能"><a href="#首先我们需要给这个博客主题添加一个div来方便实现我们的返回顶部功能" class="headerlink" title="首先我们需要给这个博客主题添加一个div来方便实现我们的返回顶部功能."></a>首先我们需要给这个博客主题添加一个div来方便实现我们的返回顶部功能.</h3><p>找到你的主题下的布局文件,如下:<br><code>D:\hexo-blog\themes\chan\layout\layout.ejs</code><br>打开它,可以看见博客的总布局,如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">  &lt;%- partial('_partials/head') %&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body</div><div class="line">  &lt;% <span class="keyword">if</span> (theme.monochrome) &#123; %&gt;</div><div class="line">    <span class="class"><span class="keyword">class</span></span>=<span class="string">"monochrome"</span></div><div class="line">  &lt;% &#125; %&gt;</div><div class="line">  &gt;</div><div class="line">  &lt;%- partial('_partials/mobile-header', &#123;&#125;, &#123;cache: true&#125;) %&gt;</div><div class="line">  &lt;div class="main-container"&gt;</div><div class="line">    &lt;%- partial('_partials/sidebar', &#123;&#125;, &#123;cache: true&#125;) %&gt;</div><div class="line">    &lt;div class="main-content"&gt;</div><div class="line">      &lt;% if (theme.maxContentWidth) &#123; %&gt;</div><div class="line">        &lt;div id="details" style="max-width: &lt;%= theme.maxContentWidth %&gt;"&gt;</div><div class="line">      &lt;% &#125; %&gt;</div><div class="line">          &lt;%- body %&gt;</div><div class="line">          &lt;%- partial('_partials/footer', &#123;&#125;, &#123;cache: true&#125;) %&gt;</div><div class="line">      &lt;% if (theme.maxContentWidth) &#123; %&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">      &lt;% &#125; %&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;%- partial('_partials/scripts', &#123;&#125;, &#123;cache: true&#125;) %&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;<span class="regexp">/html&gt;</span></div></pre></td></tr></table></figure></p>
+<p>我们在main-container这个div内添加一个名为back-to-top的div来放我们的返回顶部和浏览百分比.效果如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">  &lt;%- partial('_partials/head') %&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body</div><div class="line">  &lt;% <span class="keyword">if</span> (theme.monochrome) &#123; %&gt;</div><div class="line">    <span class="class"><span class="keyword">class</span></span>=<span class="string">"monochrome"</span></div><div class="line">  &lt;% &#125; %&gt;</div><div class="line">  &gt;</div><div class="line">  &lt;%- partial('_partials/mobile-header', &#123;&#125;, &#123;cache: true&#125;) %&gt;</div><div class="line">  &lt;div class="main-container"&gt;</div><div class="line">    &lt;%- partial('_partials/sidebar', &#123;&#125;, &#123;cache: true&#125;) %&gt;</div><div class="line">    &lt;div class="main-content"&gt;</div><div class="line">      &lt;% if (theme.maxContentWidth) &#123; %&gt;</div><div class="line">        &lt;div id="details" style="max-width: &lt;%= theme.maxContentWidth %&gt;"&gt;</div><div class="line">      &lt;% &#125; %&gt;</div><div class="line">          &lt;%- body %&gt;</div><div class="line">          &lt;%- partial('_partials/footer', &#123;&#125;, &#123;cache: true&#125;) %&gt;</div><div class="line">      &lt;% if (theme.maxContentWidth) &#123; %&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">      &lt;% &#125; %&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">      &lt;div id="back-to-top" class="back-to-top"&gt;</div><div class="line">          &lt;i class="fa fa-angle-up fa-2x" aria-hidden="true"&gt;&lt;/i&gt;</div><div class="line">          &lt;span id="scrollpercent"&gt;&lt;span&gt;&lt;/span&gt;%&lt;/span&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;%- partial('_partials/scripts', &#123;&#125;, &#123;cache: true&#125;) %&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;<span class="regexp">/html&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="再为这个div添加一个css样式"><a href="#再为这个div添加一个css样式" class="headerlink" title="再为这个div添加一个css样式"></a>再为这个div添加一个css样式</h3><p>找到<br><code>D:\hexo-blog\themes\chan\source\styles</code><br>在目录下新建一个style文件并加入css样式,如下:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.back-to-top</span> &#123;</div><div class="line">  <span class="attribute">display</span>: none;</div><div class="line">  <span class="attribute">box-sizing</span>: border-box;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">right</span>: <span class="number">30px</span>;</div><div class="line">  <span class="attribute">line-height </span>:<span class="number">10px</span>;</div><div class="line">  <span class="attribute">bottom</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">6px</span>;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#222</span>;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">12px</span>;</div><div class="line">  <span class="attribute">opacity</span>: <span class="number">0.4</span>;</div><div class="line">  <span class="attribute">color</span>: white;</div><div class="line">  <span class="attribute">text-align</span>: center;</div><div class="line">  <span class="attribute">z-index</span>: <span class="number">1050</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#back-to-top</span> <span class="selector-tag">span</span> &#123;</div><div class="line">  <span class="attribute">line-height</span>: inherit;</div><div class="line">  <span class="attribute">text-align</span>: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>并在main.styl文件里引用用这个css文件,再最后一句添加<code>@import &quot;back-to-top.styl&quot;;</code></p>
+<h3 id="最后-我们为返回顶部编译一个JavaScript文件"><a href="#最后-我们为返回顶部编译一个JavaScript文件" class="headerlink" title="最后,我们为返回顶部编译一个JavaScript文件"></a>最后,我们为返回顶部编译一个JavaScript文件</h3><p>在<code>D:\hexo-blog\themes\chan\source\scripts</code>目录下新建一个js文件.并在在文件里编译内容,如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//首先将#back-to-top隐藏</span></div><div class="line">    $(<span class="string">".back-to-top"</span>).hide();</div><div class="line">    <span class="comment">//当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失</span></div><div class="line">    $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        $(<span class="string">'.main-content'</span>).scroll(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">if</span> ($(<span class="string">'.main-content'</span>).scrollTop() &gt; <span class="number">50</span>) &#123;</div><div class="line">                $(<span class="string">".back-to-top"</span>).fadeIn(<span class="number">1500</span>);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                $(<span class="string">".back-to-top"</span>).fadeOut(<span class="number">1500</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        <span class="comment">//当点击跳转链接后，回到页面顶部位置</span></div><div class="line">        $(<span class="string">".back-to-top"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            $(<span class="string">'.main-content'</span>).animate(&#123;</div><div class="line">                    <span class="attr">scrollTop</span>: <span class="number">0</span></div><div class="line">                &#125;,</div><div class="line">                <span class="number">1000</span>);</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="comment">// 显示百分比</span></div><div class="line">    $(<span class="string">'.main-content'</span>).on(<span class="string">'scroll'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> scrollTop = $(<span class="string">'.main-content'</span>).scrollTop();</div><div class="line">        <span class="keyword">var</span> docHeight = $(<span class="string">'#details'</span>).height();</div><div class="line">        <span class="keyword">var</span> winHeight = $(<span class="string">'.main-content'</span>).height();</div><div class="line">        <span class="keyword">var</span> contentMath = (docHeight &gt; winHeight) ? (docHeight - winHeight) : ($(<span class="built_in">document</span>).height() - winHeight);</div><div class="line">        <span class="keyword">var</span> scrollPercent = (scrollTop) / (contentMath);</div><div class="line">        <span class="keyword">var</span> scrollPercentRounded = <span class="built_in">Math</span>.round(scrollPercent * <span class="number">100</span>);</div><div class="line">        <span class="keyword">var</span> scrollPercentMaxed = (scrollPercentRounded &gt; <span class="number">100</span>) ? <span class="number">100</span> : scrollPercentRounded;</div><div class="line">        $(<span class="string">'#scrollpercent&gt;span'</span>).html(scrollPercentMaxed);&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>最后在<code>D:\hexo-blog\themes\chan\layout\_partials</code>目录下找到scripts.ejs文件.打开它在末尾添加一句<code>&lt;%- js(&#39;/scripts/backtotop&#39;)%&gt;</code>引用我们新建的js文件就大功告成啦!</p>
+<h2 id="End-结束"><a href="#End-结束" class="headerlink" title="End 结束"></a>End 结束</h2><p>如果在操作的过程中遇见了问题,或者你有更好的提议或者想法欢迎与我取得联系.可以给我发<a href="\about">QQ</a>或者<a href="\about">email</a>;</p>
+
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" title="Attribution-ShareAlike">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+      </span>
+    </a>
+  </div>
+
+
+    
+
+  </footer>
+</article>
+
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2017 Solo Lee - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+
+    </div>
+      <div id="back-to-top" class="back-to-top">
+          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+          <span id="scrollpercent"><span></span>%</span>
+      </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+<script src="/scripts/backtotop.js"></script>
+
+</body>
+</html>
