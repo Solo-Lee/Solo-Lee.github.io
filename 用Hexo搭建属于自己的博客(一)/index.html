@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    用Hexo搭建属于自己的博客(一)
+  
+</title>
+
+<meta name="description" content="用Hexo搭建一个静态博客并在本地展示">
+<meta name="keywords" content="skills">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用Hexo搭建属于自己的博客(一)">
+<meta property="og:url" content="http://sololee.me/用Hexo搭建属于自己的博客(一)/index.html">
+<meta property="og:site_name" content="Solo Lee">
+<meta property="og:description" content="用Hexo搭建一个静态博客并在本地展示">
+<meta property="og:updated_time" content="2018-05-18T02:58:27.570Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用Hexo搭建属于自己的博客(一)">
+<meta name="twitter:description" content="用Hexo搭建一个静态博客并在本地展示">
+
+
+  <link rel="alternative" href="/atom.xml" title="Solo Lee" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+
+</head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">Solo Lee</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">Solo Lee</a></h1>
+    
+      <p class="subtitle">
+        tech otaku save the world
+      </p>
+    
+    <div class="info">
+      <div class="content">
+        
+          <div class="description">一个技术宅的博客</div>
+        
+        
+          <div class="author">Solo Lee</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://s.gravatar.com/avatar/ce98d78f2c1440ba8189eefe92d835b9?s=80"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Home">Home</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">Category</a>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">Tag</a>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/skills/">skills</a><span class="tag-list-count">2</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">Archive</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">1</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/about" title="About">About</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/solo-lee" title="Github" target="_blank" rel="external">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div id="details" style="max-width: 1000px">
+      
+          <article id="post-用Hexo搭建属于自己的博客(一)" class="article article-type-post">
+  
+    <h1 class="article-header">
+      用Hexo搭建属于自己的博客(一)
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  2018-05-17
+</span>
+
+    
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/hexo/">hexo</a></li></ul>
+	</span>
+
+
+    
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/skills/">skills</a></li></ul>
+	</span>
+
+
+  </div>
+  <div class="article-entry">
+    <p>用Hexo搭建一个静态博客并在本地展示<br><a id="more"></a></p>
+<h2 id="Chat-闲聊"><a href="#Chat-闲聊" class="headerlink" title="Chat 闲聊"></a>Chat 闲聊</h2><p>&emsp;&emsp;一直想写一个教学系列的文章,于是就开了这个Hexo的坑.在    满足自身的愿望同时呢,也是当做自己学习上的一个笔记吧.<br>&emsp;&emsp;网上关于Hexo的教程也有很多了,写这个教学的文章,我的目标是能让一个没有编程经验的人也能够搭建出自己的博客,上传自己的文章.<br>&emsp;&emsp;希望大家阅读我的文章能有所收获…最后在搭建的过程中有遇见什么问题可以问我,我会尽量为你解答.<br>下面开始进入我们的正题.</p>
+<h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><p>简单的说Hexo是一个基于 Node.js 的静态博客框架.Hexo有很好的易用性.对于各类人群都很友好.</p>
+<h2 id="Achieve-实现"><a href="#Achieve-实现" class="headerlink" title="Achieve 实现"></a>Achieve 实现</h2><h3 id="1-环境的准备"><a href="#1-环境的准备" class="headerlink" title="1. 环境的准备"></a>1. 环境的准备</h3><p>在搭建自己的博客前我们需要做好以下准备:</p>
+<ul>
+<li>注册一个<a href="https://github.com/" target="_blank" rel="external">Github</a>帐号</li>
+<li>安装 <a href="https://git-scm.com/downloads" target="_blank" rel="external">Git</a></li>
+<li>安装 <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
+</ul>
+<p>&emsp;&emsp;我用的是Winows的系统,所以教程中所有的操作都是在Windows上进行的.<br>在安装过程中只需要一直下一步就好了.</p>
+<h3 id="2-Hexo的安装"><a href="#2-Hexo的安装" class="headerlink" title="2. Hexo的安装"></a>2. Hexo的安装</h3><p>&emsp;&emsp;如果你已经安装上述环境的准备,那么接下来我们就可以开始Hexo的安装了.<br>使用组合快捷键<code>Win+R</code>打开运行对话框,输入<code>cmd</code>回车打开命令提示符.<br>我们在新打开的命令提示符里依次输入以下指令:</p>
+<p><font color="gray" size="4"><code>npm install -g hexo-cli</code></font>&emsp;安装Hexo</p>
+<p><font color="gray" size="4"><code>npm install</code></font>&emsp;安装相关的依赖包</p>
+<h3 id="3-博客的初始化"><a href="#3-博客的初始化" class="headerlink" title="3. 博客的初始化"></a>3. 博客的初始化</h3><p>&emsp;&emsp;选择一个磁盘新建一个文件夹．这里我在Ｅ盘根目录下新建了一个名为<code>blog</code>的文件夹．<br>可以通过指令在命令提示符里创建，也可以自己手动在磁盘里创建，选择自己熟悉的方式即可．</p>
+<p><font color="gray" size="4"><code>mkdir E:\blog</code></font><br>创建成功后我们跳转到创建的目录上或者打开文件夹对空白处单击右键选择<code>Git Bash Here</code>：</p>
+<p><font color="gray" size="4"><code>cd /d E:\blog</code></font><br>在命令提示符中或Git的shell工具中输入以下指令:</p>
+<p><font color="gray" size="4"><code>hexo init</code></font>&emsp;初始化Hexo<br>执行成功后我们可以看见原本空的文件夹里多出了很多的文件．</p>
+<h3 id="4-本地服务的启动"><a href="#4-本地服务的启动" class="headerlink" title="4. 本地服务的启动"></a>4. 本地服务的启动</h3><p>在启动本地服务器时我们需要生成静态文件,在命令提示符或shell工具中输入指令：</p>
+<p><font color="gray" size="4"><code>hexo generate</code></font>&emsp;也可以输入<font color="gray" size="4"><code>hexo g</code></font>．<br>执行成功后我们可以看到<code>blog</code>文件夹下多出了一个名为<code>public</code>的文件夹，这样我们博客的静态文件就生成成功了．<br>我们再在命令提示符或shell工具中输入指令：</p>
+<p><font color="gray" size="4"><code>hexo server</code></font>&emsp;也可以输入<font color="gray" size="4"><code>hexo s</code></font>．</p>
+<h3 id="5-本地查看博客"><a href="#5-本地查看博客" class="headerlink" title="5. 本地查看博客"></a>5. 本地查看博客</h3><p>最后到了最激动人心的时候了,做了那么多的工作,终于可以查看自己制作的博客了．<br>打开浏览器,在地址栏输入<code>localhost:4000</code>回车.<br>当自己搭建的博客展示在面前,是不是特别有成就感呢.</p>
+
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" title="Attribution-ShareAlike">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+      </span>
+    </a>
+  </div>
+
+
+    
+
+  </footer>
+</article>
+
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2018 Solo Lee - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+
+    </div>
+      <div id="back-to-top" class="back-to-top">
+          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+          <span id="scrollpercent"><span></span>%</span>
+      </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+<script src="/scripts/backtotop.js"></script>
+
+</body>
+</html>

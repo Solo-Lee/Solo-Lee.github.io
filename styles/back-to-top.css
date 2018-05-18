@@ -1,0 +1,19 @@
+.back-to-top {
+  display: none;
+  box-sizing: border-box;
+  position: absolute;
+  right: 30px;
+  line-height: 10px;
+  bottom: 50px;
+  padding: 0 6px;
+  background: #222;
+  font-size: 12px;
+  opacity: 0.4;
+  color: #fff;
+  text-align: center;
+  z-index: 1050;
+}
+#back-to-top span {
+  line-height: inherit;
+  text-align: center;
+}
